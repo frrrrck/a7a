@@ -3,249 +3,281 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 body {
-   body {
-    background: #0d014d;
-    color: rgb(9, 2, 32);
+    background: #000000;
+    color: #f5f5f5;
+ 
+    min-height: 100vh;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    overflow-x: hidden;
+ 
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
+ 
+.stars {
+    position: fixed;
+    inset: 0;
+ 
+    background-image:
+        radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+        radial-gradient(1px 1px at 60px 90px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 110px 40px, #fff, transparent),
+        radial-gradient(1px 1px at 150px 120px, #fff, transparent),
+        radial-gradient(1px 1px at 180px 20px, #fff, transparent),
+        radial-gradient(1.5px 1.5px at 30px 150px, #fff, transparent),
+        radial-gradient(1px 1px at 90px 170px, #fff, transparent);
+ 
+    background-repeat: repeat;
+    background-size: 200px 200px;
+ 
+    opacity: 0.6;
+ 
+    pointer-events: none;
+    z-index: 0;
 }
-
+ 
 .background-glow {
     position: fixed;
-
+ 
     width: 500px;
     height: 500px;
-
+ 
     background: #6d28d9;
-
+ 
     border-radius: 50%;
-
+ 
     filter: blur(180px);
-
+ 
     opacity: 0.12;
-
+ 
     top: 50%;
     left: 50%;
-
+ 
     transform: translate(-50%, -50%);
-
+ 
     pointer-events: none;
+    z-index: 0;
 }
-
+ 
 .card {
     position: relative;
-
+    z-index: 1;
+ 
     width: 92%;
     max-width: 480px;
-
+ 
     padding: 45px 30px;
-
+ 
     text-align: center;
-
+ 
     background: rgba(15, 15, 15, 0.82);
-
+ 
     border: 1px solid rgba(255,255,255,0.08);
-
+ 
     border-radius: 28px;
-
+ 
     box-shadow:
         0 25px 80px rgba(0,0,0,0.7);
-
+ 
     backdrop-filter: blur(20px);
-
+ 
     animation: appear 0.8s ease;
 }
-
+ 
 .profile {
     margin-bottom: 30px;
 }
-
+ 
 .status {
     width: 9px;
     height: 9px;
-
+ 
     background: #22c55e;
-
+ 
     border-radius: 50%;
-
+ 
     margin: 0 auto 18px;
-
+ 
     box-shadow: 0 0 15px #22c55e;
 }
-
+ 
 h1 {
     font-size: 32px;
-
+ 
     letter-spacing: 3px;
-
+ 
     margin-bottom: 8px;
 }
-
+ 
 .profile p {
     color: #777;
-
+ 
     font-size: 14px;
 }
-
+ 
 .line {
     width: 45px;
     height: 2px;
-
+ 
     background: #7c3aed;
-
+ 
     margin: 22px auto 0;
-
+ 
     box-shadow: 0 0 15px #7c3aed;
 }
-
+ 
 .socials {
     display: flex;
     flex-direction: column;
-
+ 
     gap: 14px;
 }
-
+ 
 .social {
     position: relative;
-
+ 
     display: flex;
     align-items: center;
-
+ 
     gap: 15px;
-
+ 
     padding: 17px;
-
+ 
     text-decoration: none;
-
+ 
     color: white;
-
+ 
     background: #0d0d0d;
-
+ 
     border: 1px solid #1c1c1c;
-
+ 
     border-radius: 17px;
-
+ 
     transition: 0.3s ease;
 }
-
+ 
 .social:hover {
     transform: translateY(-4px) scale(1.01);
-
+ 
     background: #151515;
-
+ 
     border-color: #333;
-
+ 
     box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
-
+ 
 .icon {
     width: 45px;
     height: 45px;
-
+ 
     display: flex;
     justify-content: center;
     align-items: center;
-
+ 
     border-radius: 13px;
-
+ 
     font-size: 24px;
-
+ 
     background: #181818;
 }
-
+ 
 .social div {
     flex: 1;
-
+ 
     text-align: left;
 }
-
+ 
 .social strong {
     display: block;
-
+ 
     font-size: 16px;
-
+ 
     margin-bottom: 4px;
 }
-
+ 
 .social small {
     color: #666;
-
+ 
     font-size: 12px;
 }
-
+ 
 .arrow {
     color: #555;
-
+ 
     font-size: 20px;
-
+ 
     transition: 0.3s;
 }
-
+ 
 .social:hover .arrow {
     color: white;
-
+ 
     transform: translateX(4px);
 }
-
+ 
 .instagram:hover .icon {
     color: #e1306c;
     box-shadow: 0 0 20px rgba(225,48,108,0.25);
 }
-
+ 
 .tiktok:hover .icon {
     color: #00f2ea;
     box-shadow: 0 0 20px rgba(0,242,234,0.2);
 }
-
+ 
 .discord:hover .icon {
     color: #5865f2;
     box-shadow: 0 0 20px rgba(88,101,242,0.25);
 }
-
+ 
 .snapchat:hover .icon {
     color: #fffc00;
     box-shadow: 0 0 20px rgba(255,252,0,0.3);
 }
-
+ 
 footer {
     margin-top: 30px;
-
+ 
     color: #444;
-
+ 
     font-size: 12px;
 }
-
+ 
 footer span {
     margin-right: 5px;
 }
-
+ 
 footer::first-letter {
     color: #666;
 }
-
+ 
 @keyframes appear {
-
+ 
     from {
         opacity: 0;
         transform: translateY(25px);
     }
-
+ 
     to {
         opacity: 1;
         transform: translateY(0);
     }
-
+ 
 }
-
+ 
 @media (max-width: 500px) {
-
+ 
     .card {
         padding: 35px 20px;
     }
-
+ 
     h1 {
         font-size: 27px;
     }
-
+ 
 }
